@@ -8,7 +8,16 @@ TERRAFORM := docker run --rm -it -e AWS_PROFILE=${AWS_PROFILE} -e AWS_REGION=${A
 
 # Syncing the website to S3 bucket.
 sync:
-	AWS_PROFILE=${AWS_PROFILE} aws s3 sync ./ s3://andrew-riess-site/ --exclude ".dir"
+	AWS_PROFILE=${AWS_PROFILE} aws s3 sync ./src/ s3://andrew-riess-site/ --exclude ".dir"
+
+# Invalidates cache from cloudfront.
+invalidate:
+	AWS_PROFILE=${AWS_PROFILE} aws cloudfront create-invalidation --distribution-id E1J14L7SYWOM2A \
+		--paths "/*"
+
+# Syncs with S3 and clears cloudfront cache.
+full: sync invalidate
+	echo "andrewriess.com has been updated!"	
 
 # Initialize the Terraform backend.
 init:
@@ -23,7 +32,7 @@ init:
 
 # Planning will sync the landing page to s3, 
 # initialize Terraform backend and then do a Terraform plan.
-plan: sync init
+plan: init
 	${TERRAFORM} plan -var="aws_region=${AWS_REGION}" -out=.terraform/terraform.tfplan	
 
 # Run a Terraform apply against the plan that was ran. It will also do a little

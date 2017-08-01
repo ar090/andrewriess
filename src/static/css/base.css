@@ -43,12 +43,12 @@ img {vertical-align: middle;}
 /*Colors*/
 
 .purple {color:#6B3189;}
-.green {color:#B3F700;}
+.green {color:#94CB25;}
 .grey {color:#6F6F6F;}
 .white {color:#FFFFFF;}
 
 .purple-bg {background-color:#6B3189;}
-.green-bg {background-color:#B3F700;}
+.green-bg {background-color:#94CB25;}
 .grey-bg {background-color:#6F6F6F;}
 
 /*.blue {color:#55CDCD;}
@@ -65,7 +65,7 @@ img {vertical-align: middle;}
 
 /*Borders*/
 .border-blue {border-bottom:2px solid #55CDCD;}
-.border-green {border-bottom:2px solid #A7FA00;}
+.border-green {border-bottom:2px solid #94CB25;}
 .border-light-grey {border-bottom:2px solid #CACACA;}
 .border-grey {border-bottom:2px solid #8C8C8C;}
 
