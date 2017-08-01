@@ -1,0 +1,123 @@
+html {
+	margin:-15px 60px 60px 60px;
+}
+
+body {
+	color:#333745;
+	line-height:24px;
+	font-family: 'Average Sans';
+	font-size: 16px;	
+}
+
+h1 {
+	font-family: 'Fjalla One', 
+	font-size:20px;
+	font-weight:300;
+}
+
+h3 {
+	font-family: 'Average Sans',
+	font-size:17px;
+	font-weight:300;
+}
+
+h3, p {font-family: 'Average Sans', sans-serif;}
+
+a {
+	font-family: 'Average Sans';	
+	text-decoration:none;
+	font-weight:bold;
+}
+
+a:hover {text-decoration:underline;}
+
+p {line-height: 23px;}
+
+label {
+  display: inline-block;
+  margin-bottom: .5rem;
+}
+
+img {vertical-align: middle;}
+
+/*Colors*/
+
+.purple {color:#6B3189;}
+.green {color:#B3F700;}
+.grey {color:#6F6F6F;}
+.white {color:#FFFFFF;}
+
+.purple-bg {background-color:#6B3189;}
+.green-bg {background-color:#B3F700;}
+.grey-bg {background-color:#6F6F6F;}
+
+/*.blue {color:#55CDCD;}
+.green {color:#A7FA00;}
+.white {color:#FFFFFF;}
+.grey {color:#8C8C8C;}
+.light-grey {color:#CACACA;}
+
+.blue-bg {background-color:#55CDCD;}
+.green-bg {background-color:#A7FA00;}
+.white-bg {background-color:#FFFFFF;}
+.grey-bg {background-color:#8C8C8C;}
+.light-grey-bg {background-color:#CACACA;}*/
+
+/*Borders*/
+.border-blue {border-bottom:2px solid #55CDCD;}
+.border-green {border-bottom:2px solid #A7FA00;}
+.border-light-grey {border-bottom:2px solid #CACACA;}
+.border-grey {border-bottom:2px solid #8C8C8C;}
+
+/*Functional*/
+.large-font {font-size: 20px;}
+.pull-right {float: right;}
+.pull-left {float: left;}
+
+.icon {
+	font-size:33px;
+}
+
+.label {
+	text-align:center;
+    font-size:100%;
+    padding:7px;
+    margin-right:7px;
+    margin-top:5px;
+    margin-bottom:5px;
+    border-radius: 10px;
+}
+
+.divider {
+	height:60px;
+	clear:both;
+	overflow:hidden;
+	width:100%;
+}
+
+.divider-xs {
+	height: 15px;
+	clear: both;
+	overflow: hidden;
+	width: 100%;	
+}
+
+/*Specific*/
+.wrapper-icon {
+	max-width:400px;
+	margin: 0 auto;
+	display: flex;
+	justify-content: space-between; 
+}
+
+.wrapper {
+	max-width:800px;
+	margin: 0 auto;
+}
+
+/*Media*/
+@media (max-width: 575px) {
+  .hidden-mobile {
+    display: none !important;
+  }
+}
